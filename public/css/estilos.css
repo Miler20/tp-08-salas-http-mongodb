@@ -1,0 +1,148 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #252525;
+  background: #f4f6f8;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.encabezado,
+.contenedor,
+.pie {
+  width: min(70rem, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #d0d5dd;
+}
+
+.encabezado nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.marca {
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: #1f2937;
+}
+
+a {
+  color: #245c8a;
+  font-weight: 700;
+}
+
+.contenedor {
+  flex: 1;
+  padding: 3rem 0;
+}
+
+.hero,
+.estado,
+.detalle,
+.panel-formulario {
+  max-width: 46rem;
+  padding: 2rem;
+  border: 1px solid #d0d5dd;
+  border-radius: 1rem;
+  background: white;
+}
+
+.etiqueta {
+  color: #8a4f1d;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.boton,
+button {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  border: 0;
+  border-radius: 0.6rem;
+  background: #245c8a;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.grilla {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
+.tarjeta {
+  padding: 1.25rem;
+  border: 1px solid #d0d5dd;
+  border-radius: 0.8rem;
+  background: white;
+}
+
+.formulario {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.formulario label {
+  font-weight: 700;
+}
+
+.formulario input,
+.formulario select {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #98a2b3;
+  border-radius: 0.5rem;
+  font: inherit;
+}
+
+.error {
+  padding: 0.8rem 1rem;
+  border-left: 4px solid #b42318;
+  background: #fff0ed;
+  color: #7a271a;
+  font-weight: 700;
+}
+
+input:focus,
+select:focus,
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #f4c95d;
+  outline-offset: 3px;
+}
+
+.pie {
+  padding: 1rem 0;
+  border-top: 1px solid #d0d5dd;
+  color: #667085;
+}
+
+@media (max-width: 600px) {
+  .encabezado {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

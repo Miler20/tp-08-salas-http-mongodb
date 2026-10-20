@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>
+    <%= titulo %> · Reservas de salas
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="/css/estilos.css"
+  >
+</head>
+
+<body>
+
+  <header class="encabezado">
+    <a class="marca" href="/">
+      Biblioteca de estudio
+    </a>
+
+    <nav aria-label="Navegación principal">
+      <a href="/">
+        Inicio
+      </a>
+
+      <a href="/reservas">
+        Reservas
+      </a>
+
+      <a href="/reservas/nueva">
+        Nueva reserva
+      </a>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+    <%- body %>
+  </main>
+
+  <footer class="pie">
+    <p>
+      Solicitud:
+      <%= solicitudId %>
+    </p>
+  </footer>
+
+</body>
+
+</html>
